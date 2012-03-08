@@ -77,6 +77,6 @@ stop(_State) ->
 init([]) ->
     %% Return.
     {ok, { {one_for_one, 5, 10}, [
-        ?CHILD(sync_scanner, worker),
-        ?CHILD(sync_options, worker)
+        ?CHILD(sync_options, worker),
+        ?CHILD(sync_scanner, worker)
     ]} }.
